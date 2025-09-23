@@ -94,6 +94,77 @@ h6 {
 .hero-section {
     position: relative;
     overflow: hidden;
+    background: url("../images/MentalHealthAwareness1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(79, 189, 186, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+    color: #2c5f5f;
+}
+
+.hero-text {
+    color: #4a7c7c;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.hero-quote {
+    color: #5a8a8a;
+    font-style: italic;
+}
+
+.btn-hero-primary {
+    background-color: #4fbdba;
+    border-color: #4fbdba;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(79, 189, 186, 0.4);
+}
+
+.btn-hero-outline {
+    border-color: #4fbdba;
+    color: #4fbdba;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 12px rgba(79, 189, 186, 0.2);
+}
+
+.hero-icon {
+    opacity: 0.9;
+}
+
+.decorative-icon {
+    position: absolute;
+    opacity: 0.1;
+    color: #4fbdba;
+}
+
+.decorative-leaf {
+    top: 20%;
+    left: 10%;
+    font-size: 3rem;
+}
+
+.decorative-dove {
+    bottom: 20%;
+    right: 15%;
+    font-size: 2.5rem;
+}
+
+.decorative-seedling {
+    top: 60%;
+    left: 5%;
+    font-size: 2rem;
+    opacity: 0.08;
 }
 
 .hero-section .btn {
@@ -107,6 +178,47 @@ h6 {
 
 section {
     padding: 4rem 0;
+}
+
+/* Testimonial Carousel */
+#testimonialCarousel {
+    max-width: 800px;
+}
+
+#testimonialCarousel .carousel-item {
+    height: 350px;
+}
+
+#testimonialCarousel .carousel-item > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#testimonialCarousel .carousel-control-prev,
+#testimonialCarousel .carousel-control-next {
+    width: 15%;
+}
+
+#testimonialCarousel .carousel-control-prev {
+    left: -60px;
+}
+
+#testimonialCarousel .carousel-control-next {
+    right: -60px;
+}
+
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+    background-color: var(--primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#testimonialCarousel .carousel-indicators button {
+    background-color: var(--primary);
 }
 
 /* Cards */
