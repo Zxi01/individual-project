@@ -1,60 +1,76 @@
 /* Mental Health Awareness Website - Custom Styles */
 
-/* Root variables for consistent theming */
 :root {
-    --mental-health-primary: #4fbdba;
-    --mental-health-accent: #f9c6aa;
-    --mental-health-background: #e6f2f0;
-    --mental-health-headings: #333333;
-    --mental-health-text: #666666;
+    --primary: #4fbdba;
+    --accent: #f9c6aa;
+    --background: #e6f2f0;
+    --headings: #333333;
+    --text: #666666;
 }
 
 /* Global Styles */
+* {
+    transition: all 0.3s ease;
+}
+
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--mental-health-text);
-    background-color: var(--mental-health-background);
+    color: var(--text);
+    background-color: var(--background);
 }
 
-/* Headings Styling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    color: var(--mental-health-headings);
+    color: var(--headings);
 }
 
-/* Smooth scrolling for anchor links */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom text colors */
+/* Components */
 .text-primary {
-    color: var(--mental-health-primary) !important;
+    color: var(--primary);
+}
+
+.btn {
+    border-radius: 25px;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
-    background-color: var(--mental-health-primary);
-    border-color: var(--mental-health-primary);
-    transition: all 0.3s ease;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn-primary:hover {
-    background-color: var(--mental-health-accent);
-    border-color: var(--mental-health-accent);
-    transform: translateY(-2px);
+    background-color: var(--accent);
+    border-color: var(--accent);
     color: #333;
 }
 
-/* Navigation Styles */
+.btn:focus,
+.nav-link:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Navigation */
 .navbar {
-    transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .navbar-brand {
@@ -64,25 +80,23 @@ html {
 
 .nav-link {
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--mental-health-primary) !important;
+    color: var(--primary);
 }
 
-/* Hero Section */
+/* Layout */
+.min-vh-75 {
+    min-height: 60vh;
+}
+
 .hero-section {
     position: relative;
     overflow: hidden;
 }
 
-.min-vh-75 {
-    min-height: 60vh;
-}
-
 .hero-section .btn {
-    transition: all 0.4s ease;
     box-shadow: 0 4px 15px rgba(79, 189, 186, 0.2);
 }
 
@@ -91,95 +105,69 @@ html {
     box-shadow: 0 8px 25px rgba(79, 189, 186, 0.3);
 }
 
-/* Card Styles */
+section {
+    padding: 4rem 0;
+}
+
+/* Cards */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 15px;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
-}
-
-.card-body {
-    padding: 2rem;
-}
-
-.card .display-4 {
-    transition: transform 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover .display-4 {
     transform: scale(1.1);
 }
 
-/* Button Styles */
-.btn {
-    border-radius: 25px;
-    font-weight: 500;
-    padding: 0.5rem 1.5rem;
-    transition: all 0.3s ease;
+.card-body {
+    padding: 2rem;
 }
 
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
-}
-
-footer a {
-    transition: color 0.3s ease;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
 footer a:hover {
-    color: var(--mental-health-primary) !important;
+    color: var(--primary);
 }
 
 footer .fab:hover {
     transform: scale(1.2);
-    transition: transform 0.3s ease;
 }
 
-/* Section Spacing */
-section {
-    padding: 4rem 0;
-}
-
-/* Background sections styling */
+/* Background sections */
 .bg-light {
-    background-color: #ffffff !important;
+    background-color: #ffffff;
 }
 
+.bg-light h1,
 .bg-light h2,
 .bg-light h3,
 .bg-light h4,
 .bg-light h5,
 .bg-light h6 {
-    color: var(--mental-health-headings) !important;
+    color: var(--headings);
 }
 
 .bg-light p,
 .bg-light .text-muted {
-    color: var(--mental-health-text) !important;
+    color: var(--text);
 }
 
-/* Responsive Design Enhancements */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .hero-section {
+    .hero-section,
+    section {
         padding: 3rem 0;
     }
 
     .card-body {
         padding: 1.5rem;
-    }
-
-    section {
-        padding: 3rem 0;
     }
 
     .navbar-brand {
@@ -199,17 +187,4 @@ section {
     .card-body {
         padding: 1rem;
     }
-}
-
-/* Accessibility Improvements */
-.btn:focus,
-.nav-link:focus {
-    outline: 2px solid var(--mental-health-primary);
-    outline-offset: 2px;
-}
-
-/* Loading Animation for Icons */
-.fas,
-.fab {
-    transition: all 0.3s ease;
 }
