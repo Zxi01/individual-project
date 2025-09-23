@@ -4,8 +4,8 @@
     --primary: #4fbdba;
     --accent: #f9c6aa;
     --background: #e6f2f0;
-    --headings: #333333;
-    --text: #666666;
+    --headings: #333;
+    --text: #666;
 }
 
 /* Global Styles */
@@ -94,10 +94,8 @@ h6 {
 .hero-section {
     position: relative;
     overflow: hidden;
-    background: url("../images/MentalHealthAwareness1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../images/MentalHealthAwareness1.png") center/cover
+        no-repeat;
 }
 
 .hero-content {
@@ -114,7 +112,6 @@ h6 {
 .hero-text {
     color: #4a7c7c;
     font-size: 1.2rem;
-    line-height: 1.6;
 }
 
 .hero-quote {
@@ -299,4 +296,39 @@ footer .fab:hover {
     .card-body {
         padding: 1rem;
     }
+}
+
+/* Footer */
+.footer-custom {
+    background: linear-gradient(135deg, var(--primary), #3a9d9a);
+    color: white;
+}
+
+.footer-custom h5,
+.footer-custom h6 {
+    color: white;
+}
+
+.footer-custom .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.footer-custom a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-custom a:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.footer-custom .social-icons a:hover {
+    transform: scale(1.1);
+    color: var(--accent);
+}
+
+.footer-custom hr {
+    border-color: rgba(255, 255, 255, 0.3);
 }
