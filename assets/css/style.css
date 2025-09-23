@@ -2,18 +2,8 @@
 
 /* Root variables for consistent theming */
 :root {
-    --primary-color: #4fbdba;
-    --secondary-color: #6c757d;
-    --success-color: #198754;
-    --danger-color: #dc3545;
-    --warning-color: #ffc107;
-    --info-color: #0dcaf0;
-    --light-color: #e6f2f0;
-    --dark-color: #666666;
     --mental-health-primary: #4fbdba;
-    --mental-health-secondary: #4fbdba;
     --mental-health-accent: #f9c6aa;
-    --mental-health-success: #51cf66;
     --mental-health-background: #e6f2f0;
     --mental-health-headings: #333333;
     --mental-health-text: #666666;
@@ -47,10 +37,6 @@ html {
     color: var(--mental-health-primary) !important;
 }
 
-.bg-primary {
-    background-color: var(--mental-health-primary) !important;
-}
-
 .btn-primary {
     background-color: var(--mental-health-primary);
     border-color: var(--mental-health-primary);
@@ -62,10 +48,6 @@ html {
     border-color: var(--mental-health-accent);
     transform: translateY(-2px);
     color: #333;
-}
-
-.btn-outline-light:hover {
-    transform: translateY(-2px);
 }
 
 /* Navigation Styles */
@@ -83,16 +65,10 @@ html {
 .nav-link {
     font-weight: 500;
     transition: color 0.3s ease;
-    position: relative;
 }
 
 .nav-link:hover {
     color: var(--mental-health-primary) !important;
-}
-
-.nav-link.btn {
-    border-radius: 25px;
-    transition: all 0.3s ease;
 }
 
 /* Hero Section */
@@ -101,12 +77,10 @@ html {
     overflow: hidden;
 }
 
-/* Calm mental health hero styling */
 .min-vh-75 {
     min-height: 60vh;
 }
 
-/* Smooth animations for hero elements */
 .hero-section .btn {
     transition: all 0.4s ease;
     box-shadow: 0 4px 15px rgba(79, 189, 186, 0.2);
@@ -115,34 +89,6 @@ html {
 .hero-section .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(79, 189, 186, 0.3);
-}
-
-.hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(
-            circle at 30% 20%,
-            rgba(79, 189, 186, 0.05) 0%,
-            transparent 50%
-        ),
-        radial-gradient(
-            circle at 70% 80%,
-            rgba(249, 198, 170, 0.03) 0%,
-            transparent 50%
-        );
-    pointer-events: none;
-}
-
-.min-vh-50 {
-    min-height: 50vh;
-}
-
-.hero-image i {
-    animation: pulse 2s ease-in-out infinite;
 }
 
 /* Card Styles */
@@ -160,7 +106,6 @@ html {
     padding: 2rem;
 }
 
-/* Statistics Section */
 .card .display-4 {
     transition: transform 0.3s ease;
 }
@@ -169,21 +114,12 @@ html {
     transform: scale(1.1);
 }
 
-/* Testimonial Cards */
-.fas.fa-quote-left {
-    opacity: 0.3;
-}
-
 /* Button Styles */
 .btn {
     border-radius: 25px;
     font-weight: 500;
     padding: 0.5rem 1.5rem;
     transition: all 0.3s ease;
-}
-
-.btn-lg {
-    padding: 0.75rem 2rem;
 }
 
 .btn:hover {
@@ -209,31 +145,33 @@ footer .fab:hover {
     transition: transform 0.3s ease;
 }
 
-/* Alert Styles */
-.alert-warning {
-    background-color: rgba(255, 193, 7, 0.1);
-    border-color: var(--warning-color);
-    color: #856404;
-}
-
 /* Section Spacing */
 section {
     padding: 4rem 0;
+}
+
+/* Background sections styling */
+.bg-light {
+    background-color: #ffffff !important;
+}
+
+.bg-light h2,
+.bg-light h3,
+.bg-light h4,
+.bg-light h5,
+.bg-light h6 {
+    color: var(--mental-health-headings) !important;
+}
+
+.bg-light p,
+.bg-light .text-muted {
+    color: var(--mental-health-text) !important;
 }
 
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
     .hero-section {
         padding: 3rem 0;
-    }
-
-    .display-4 {
-        font-size: 2rem;
-    }
-
-    .btn-lg {
-        padding: 0.5rem 1.5rem;
-        font-size: 1rem;
     }
 
     .card-body {
@@ -258,14 +196,6 @@ section {
         font-size: 1rem;
     }
 
-    .display-1 {
-        font-size: 3rem;
-    }
-
-    .display-4 {
-        font-size: 2.5rem;
-    }
-
     .card-body {
         padding: 1rem;
     }
@@ -282,53 +212,4 @@ section {
 .fas,
 .fab {
     transition: all 0.3s ease;
-}
-
-/* Custom Utilities */
-.text-mental-primary {
-    color: var(--mental-health-primary) !important;
-}
-
-.bg-mental-primary {
-    background-color: var(--mental-health-primary) !important;
-}
-
-.shadow-custom {
-    box-shadow: 0 10px 25px rgba(79, 189, 186, 0.15) !important;
-}
-
-/* Hover Effects for Interactive Elements */
-.list-unstyled li:hover {
-    transform: translateX(5px);
-    transition: transform 0.3s ease;
-}
-
-/* Custom margin and padding utilities */
-.py-6 {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-}
-
-.my-6 {
-    margin-top: 4rem !important;
-    margin-bottom: 4rem !important;
-}
-
-/* Background sections styling */
-.bg-light {
-    background-color: #ffffff !important;
-}
-
-/* Ensure proper contrast for text on white backgrounds */
-.bg-light h2,
-.bg-light h3,
-.bg-light h4,
-.bg-light h5,
-.bg-light h6 {
-    color: var(--mental-health-headings) !important;
-}
-
-.bg-light p,
-.bg-light .text-muted {
-    color: var(--mental-health-text) !important;
 }
