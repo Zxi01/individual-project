@@ -2,10 +2,11 @@
 
 :root {
     --primary: #4fbdba;
+    --primary-text: #2d7c7a;
     --accent: #f9c6aa;
     --background: #e6f2f0;
     --headings: #333;
-    --text: #666;
+    --text: #444;
 }
 
 /* Global Styles */
@@ -45,7 +46,7 @@ h6 {
 
 /* Components */
 .text-primary {
-    color: var(--primary);
+    color: var(--primary-text);
 }
 
 .btn {
@@ -92,7 +93,7 @@ h6 {
 }
 
 .nav-link:hover {
-    color: var(--primary);
+    color: var(--primary-text);
 }
 
 .hero-section {
@@ -136,11 +137,11 @@ h6 {
 }
 
 .btn-hero-outline {
-    border-color: #000000;
-    color: #000000;
+    border-color: #4fbdba;
+    color: #4fbdba;
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(79, 189, 186, 0.2);
 }
 
 .hero-icon {
@@ -250,7 +251,7 @@ footer {
 }
 
 footer a:hover {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 footer .fab:hover {
@@ -435,11 +436,11 @@ footer .fab:hover {
 }
 
 .footer-custom .text-muted {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
 }
 
 .footer-custom a {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.98);
     text-decoration: none;
     transition: all 0.3s ease;
 }
