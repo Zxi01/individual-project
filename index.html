@@ -16,7 +16,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
         <div class="container">
             <a class="navbar-brand text-primary" href="#home">Our Mental Health</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -25,8 +26,8 @@
                     <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2"
-                            href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white px-3 ms-2" href="#contact"
+                            aria-label="Go to contact form to send a message for mental health support">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -69,17 +70,20 @@
     <section id="testimonials" class="py-5 bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2 class="fw-bold">Testimonials</h2>
+                <div class="col-12 text-center">
+                    <h2 class="fw-bold">Experiences</h2>
                     <p class="text-muted">Real stories from people on their mental health journey</p>
                 </div>
                 <div class="col-lg-8 mx-auto">
                     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
-                                class="active"></button>
-                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                                class="active" aria-current="true"
+                                aria-label="Go to testimonial 1 from Emma about anxiety support"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                                aria-label="Go to testimonial 2 from Jordan about finding help during difficult times"></button>
+                            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                                aria-label="Go to testimonial 3 from Ravi about family mental health support"></button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -126,14 +130,14 @@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="prev">
+                            data-bs-slide="prev" aria-label="View previous mental health testimonial">
                             <span class="carousel-control-prev-icon"></span>
-                            <span class="visually-hidden">Previous</span>
+                            <span class="visually-hidden">Previous testimonial</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                            data-bs-slide="next">
+                            data-bs-slide="next" aria-label="View next mental health testimonial">
                             <span class="carousel-control-next-icon"></span>
-                            <span class="visually-hidden">Next</span>
+                            <span class="visually-hidden">Next testimonial</span>
                         </button>
                     </div>
                 </div>
@@ -152,30 +156,35 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-heart text-warning display-4 mb-3"></i>
+                            <i class="fas fa-heart text-danger display-4 mb-3"></i>
                             <h4 class="text-primary mb-3">Our Mission</h4>
-                            <p class="card-text">To break the stigma around mental health and provide accessible
-                                resources for everyone.</p>
+                            <p class="card-text">We believe mental health is a journey worth honoring. Our mission is to
+                                break the stigma, share real stories, and offer support for anyone navigating emotional
+                                challenges. You're not alone—your feelings are valid, and your healing matters.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-hands-helping text-success display-4 mb-3"></i>
+                            <i class="fas fa-eye text-primary display-4 mb-3"></i>
                             <h4 class="text-primary mb-3">Our Vision</h4>
-                            <p class="card-text">A world where mental health support is available, accessible, and
-                                accepted by all.</p>
+                            <p class="card-text">We envision a world where mental health is treated with compassion, not
+                                silence. A place where every voice is heard, every struggle respected, and healing is
+                                embraced as a shared journey. Together, we’re building a future rooted in empathy,
+                                awareness, and hope.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <i class="fas fa-lightbulb text-info display-4 mb-3"></i>
+                            <i class="fas fa-lightbulb text-warning display-4 mb-3"></i>
                             <h4 class="text-primary mb-3">What We Offer</h4>
-                            <p class="card-text">Comprehensive resources, expert guidance, and a supportive community to
-                                help you on your mental health journey.</p>
+                            <p class="card-text">From uplifting stories to practical resources, we offer tools to help
+                                you feel seen, supported, and empowered. Explore articles, coping strategies, and
+                                community spaces designed to nurture your mental well-being—because you deserve care
+                                that meets you where you are.</p>
                         </div>
                     </div>
                 </div>
@@ -278,9 +287,15 @@
                     <h5 class="mb-3">Our Mental Health</h5>
                     <p class="text-muted mb-4">Supporting mental health and wellbeing for everyone.</p>
                     <div class="d-flex gap-3 social-icons justify-content-center">
-                        <a href="https://www.Facebook.com" class="fs-4"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.Twitter.com" class="fs-4"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.Instagram.com" class="fs-4"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in a new tab)"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in a new tab)"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.twitter.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Twitter feed (opens in a new tab)"><i
+                                class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>

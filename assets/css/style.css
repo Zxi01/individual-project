@@ -449,6 +449,11 @@ footer .fab:hover {
     transform: translateY(-1px);
 }
 
+.footer-custom .social-icons a {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
 .footer-custom .social-icons a:hover {
     transform: scale(1.1);
     color: var(--accent);
