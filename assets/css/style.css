@@ -86,16 +86,15 @@ h6 {
     color: var(--primary);
 }
 
-/* Layout */
-.min-vh-75 {
-    min-height: 60vh;
-}
-
 .hero-section {
     position: relative;
     overflow: hidden;
-    background: url("../images/MentalHealthAwareness1.png") center/cover
+    background: url("../images/MentalHealthAwareness1.png?v=2") center/cover
         no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
 }
 
 .hero-content {
@@ -249,6 +248,18 @@ footer .fab:hover {
     transform: scale(1.2);
 }
 
+/* Blockquote Footer Override */
+.blockquote-footer {
+    background: white;
+    color: #333;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    border-left: 4px solid var(--primary);
+    border-right: 4px solid var(--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Background sections */
 .bg-light {
     background-color: #ffffff;
@@ -270,7 +281,16 @@ footer .fab:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-section,
+    .hero-section {
+        min-height: 100vh;
+        padding: 1.5rem 0;
+    }
+
+    .hero-content {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+
     section {
         padding: 3rem 0;
     }
@@ -282,11 +302,38 @@ footer .fab:hover {
     .navbar-brand {
         font-size: 1.25rem;
     }
+
+    #testimonialCarousel .carousel-control-prev,
+    #testimonialCarousel .carousel-control-next {
+        width: 10%;
+    }
+
+    #testimonialCarousel .carousel-control-prev {
+        left: -30px;
+    }
+
+    #testimonialCarousel .carousel-control-next {
+        right: -30px;
+    }
 }
 
 @media (max-width: 576px) {
+    .hero-section {
+        min-height: 100vh;
+        padding: 1rem 0;
+    }
+
     .hero-section h1 {
         font-size: 1.75rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
     }
 
     .lead {
@@ -295,6 +342,75 @@ footer .fab:hover {
 
     .card-body {
         padding: 1rem;
+    }
+
+    #testimonialCarousel .carousel-item {
+        height: 300px;
+        padding: 1rem;
+    }
+
+    #testimonialCarousel .carousel-control-prev,
+    #testimonialCarousel .carousel-control-next {
+        display: none;
+    }
+
+    .d-flex.gap-3 {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 390px) {
+    .hero-section {
+        padding: 0.5rem 0;
+    }
+
+    .hero-content {
+        padding: 1rem 0.75rem;
+        margin: 0.25rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    #testimonialCarousel .carousel-item {
+        height: 280px;
+        padding: 0.5rem;
+    }
+
+    #testimonialCarousel .carousel-item > div {
+        padding: 1rem 0.5rem;
+    }
+
+    .blockquote p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .blockquote-footer {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .display-4 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
 }
 
