@@ -26,6 +26,10 @@ body {
     min-height: 100vh;
 }
 
+.min-vh-75 {
+    min-height: 75vh;
+}
+
 .flex-grow-1 {
     flex-grow: 1;
 }
@@ -129,52 +133,19 @@ h6 {
 }
 
 .btn-hero-primary {
-    background-color: #4fbdba;
-    border-color: #4fbdba;
+    background-color: var(--primary);
+    border-color: var(--primary);
     color: white;
     font-weight: 500;
     box-shadow: 0 4px 12px rgba(79, 189, 186, 0.4);
 }
 
 .btn-hero-outline {
-    border-color: #4fbdba;
-    color: #4fbdba;
+    border-color: var(--primary);
+    color: var(--primary);
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 12px rgba(79, 189, 186, 0.2);
-}
-
-.hero-icon {
-    opacity: 0.9;
-}
-
-.decorative-icon {
-    position: absolute;
-    opacity: 0.1;
-    color: #4fbdba;
-}
-
-.decorative-leaf {
-    top: 20%;
-    left: 10%;
-    font-size: 3rem;
-}
-
-.decorative-dove {
-    bottom: 20%;
-    right: 15%;
-    font-size: 2.5rem;
-}
-
-.decorative-seedling {
-    top: 60%;
-    left: 5%;
-    font-size: 2rem;
-    opacity: 0.08;
-}
-
-.hero-section .btn {
-    box-shadow: 0 4px 15px rgba(79, 189, 186, 0.2);
 }
 
 .hero-section .btn:hover {
@@ -245,19 +216,6 @@ section {
     padding: 2rem;
 }
 
-/* Footer */
-footer {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-}
-
-footer a:hover {
-    color: var(--accent);
-}
-
-footer .fab:hover {
-    transform: scale(1.2);
-}
-
 /* Blockquote Footer Override */
 .blockquote-footer {
     background: white;
@@ -292,7 +250,6 @@ footer .fab:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-section {
-        min-height: 100vh;
         padding: 1.5rem 0;
     }
 
@@ -329,7 +286,6 @@ footer .fab:hover {
 
 @media (max-width: 576px) {
     .hero-section {
-        min-height: 100vh;
         padding: 1rem 0;
     }
 
