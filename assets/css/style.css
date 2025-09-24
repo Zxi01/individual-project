@@ -20,6 +20,15 @@ body {
     background-color: var(--background);
 }
 
+/* Sticky Footer Support */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
